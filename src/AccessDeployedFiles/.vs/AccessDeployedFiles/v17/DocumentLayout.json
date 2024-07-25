@@ -1,0 +1,79 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "H:\\Source Code\\AccessDeployedFiles\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7AF89D68-A945-46F7-ADF5-1DD8AD5580D3}|AccessDeployedFiles\\AccessDeployedFiles.csproj|h:\\source code\\accessdeployedfiles\\accessdeployedfiles\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7AF89D68-A945-46F7-ADF5-1DD8AD5580D3}|AccessDeployedFiles\\AccessDeployedFiles.csproj|solutionrelative:accessdeployedfiles\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7AF89D68-A945-46F7-ADF5-1DD8AD5580D3}|AccessDeployedFiles\\AccessDeployedFiles.csproj|h:\\source code\\accessdeployedfiles\\accessdeployedfiles\\resources\\raw\\aboutassets.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{7AF89D68-A945-46F7-ADF5-1DD8AD5580D3}|AccessDeployedFiles\\AccessDeployedFiles.csproj|solutionrelative:accessdeployedfiles\\resources\\raw\\aboutassets.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7AF89D68-A945-46F7-ADF5-1DD8AD5580D3}|AccessDeployedFiles\\AccessDeployedFiles.csproj|h:\\source code\\accessdeployedfiles\\accessdeployedfiles\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{7AF89D68-A945-46F7-ADF5-1DD8AD5580D3}|AccessDeployedFiles\\AccessDeployedFiles.csproj|solutionrelative:accessdeployedfiles\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 190,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "aboutassets.txt",
+              "DocumentMoniker": "H:\\Source Code\\AccessDeployedFiles\\AccessDeployedFiles\\Resources\\Raw\\aboutassets.txt",
+              "RelativeDocumentMoniker": "AccessDeployedFiles\\Resources\\Raw\\aboutassets.txt",
+              "ToolTip": "H:\\Source Code\\AccessDeployedFiles\\AccessDeployedFiles\\Resources\\Raw\\aboutassets.txt",
+              "RelativeToolTip": "AccessDeployedFiles\\Resources\\Raw\\aboutassets.txt",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2024-07-25T14:10:21.398Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainPage.xaml",
+              "DocumentMoniker": "H:\\Source Code\\AccessDeployedFiles\\AccessDeployedFiles\\MainPage.xaml",
+              "RelativeDocumentMoniker": "AccessDeployedFiles\\MainPage.xaml",
+              "ToolTip": "H:\\Source Code\\AccessDeployedFiles\\AccessDeployedFiles\\MainPage.xaml",
+              "RelativeToolTip": "AccessDeployedFiles\\MainPage.xaml",
+              "ViewState": "AQIAABMAAAAAAAAAAAAAACUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-07-25T01:06:01.456Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainPage.xaml.cs",
+              "DocumentMoniker": "H:\\Source Code\\AccessDeployedFiles\\AccessDeployedFiles\\MainPage.xaml.cs",
+              "RelativeDocumentMoniker": "AccessDeployedFiles\\MainPage.xaml.cs",
+              "ToolTip": "H:\\Source Code\\AccessDeployedFiles\\AccessDeployedFiles\\MainPage.xaml.cs",
+              "RelativeToolTip": "AccessDeployedFiles\\MainPage.xaml.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAcwA4AAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-25T01:04:42.16Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
