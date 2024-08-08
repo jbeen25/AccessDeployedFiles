@@ -26,3 +26,17 @@ For anyone else coming across this same issue, I have a solution. I am purposefu
 As of August 2024, any time a file is dragged & dropped into the Raw folder this triggers an event within Visual Studios to edit the project code to remove those files on deployment. Simply remove the automatically generated code [(here)](https://github.com/jbeen25/AccessDeployedFiles/blob/main/src/AccessDeployedFiles/AccessDeployedFiles/AccessDeployedFiles.csproj#L75-L83) and this project will work properly.
 
 Thanks to those who helped figure out the [issue](https://github.com/dotnet/maui/issues/23833).
+
+------------------------------------- Improved ----------------------------------------------------
+
+Now enables proper streaming of binary files as StreamReader and StreamWriter only work for Text files. This is common knowledge but I was not thinking about this when orginally uploading this project.
+
+```csharp
+using (var source = await FileSystem.OpenAppPackageFileAsync(fileName))
+{
+	using (var destination = file.Create())
+	{
+		await source.CopyToAsync(destination);
+	}
+}
+```

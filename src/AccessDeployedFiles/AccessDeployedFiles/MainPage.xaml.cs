@@ -2,8 +2,6 @@
 {
 	public partial class MainPage : ContentPage
 	{
-		int count = 0;
-
 		public MainPage()
 		{
 			InitializeComponent();
@@ -17,7 +15,7 @@
 
 		private async void MoveAssetsClicked(object sender, EventArgs e)
 		{
-			await MoveFile("AboutAssets.txt");
+			await MoveFile("aboutassets.txt", false);
 		}
 		private void DeleteAssetsClicked(object sender, EventArgs e)
 		{
@@ -26,7 +24,7 @@
 
 		private async void MoveDotTxtClicked(object sender, EventArgs e)
 		{
-			await MoveFile("dotnetbot.txt");
+			await MoveFile("dotnetbot.txt", false);
 		}
 		private void DeleteDotTxtClicked(object sender, EventArgs e)
 		{
@@ -35,14 +33,14 @@
 
 		private async void MoveDotPngClicked(object sender, EventArgs e)
 		{
-			await MoveFile("dotnet.png");
+			await MoveFile("dotnet.png", false);
 		}
 		private void DeleteDotPngClicked(object sender, EventArgs e)
 		{
 			DeleteFile("dotnet.png");
 		}
 
-		private async Task MoveFile(string fileName)
+		private async Task MoveFile(string fileName, bool textFile)
 		{
 			FileInfo file = new FileInfo(Path.Combine(FileSystem.AppDataDirectory, fileName));
 
@@ -50,14 +48,33 @@
 			{
 				try
 				{
-					var stream = await FileSystem.OpenAppPackageFileAsync(fileName);
-					var reader = new StreamReader(stream);
+					// Checks to make sure files exists at deployment.
+					if (!await FileSystem.AppPackageFileExistsAsync(fileName))
+						throw new Exception("File " + fileName + " does not exist. Edit project code and delete <ItemGroup> that removed files.");
 
-					var contents = reader.ReadToEnd();
+					if (textFile)
+					{ // Recommended Method when dealing with text files but not necessary.
+						using (var stream = await FileSystem.OpenAppPackageFileAsync(fileName))
+						{
+							using (var reader = new StreamReader(stream))
+							{
+								var contents = reader.ReadToEnd();
 
-					StreamWriter writer = new(file.FullName);
-
-					await writer.WriteAsync(contents);
+								using (StreamWriter writer = file.CreateText())
+									await writer.WriteAsync(contents);
+							}
+						}
+					}
+					else
+					{ // The only method that can be used for binary files. (Can be used for text files too.)
+						using (var source = await FileSystem.OpenAppPackageFileAsync(fileName))
+						{
+							using (var destination = file.Create())
+							{
+								await source.CopyToAsync(destination);
+							}
+						}
+					}
 
 					MessageLabel.Text = "File Copied from Raw";
 				}
